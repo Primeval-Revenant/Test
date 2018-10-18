@@ -788,7 +788,7 @@ void parametros(int *x_pos, int *y_pos, int *_n_cor, int _goal[6], char *_pname)
 
     while (l>8)
     {
-        printf("Por favor insira o seu nome (m·x 8 caratÈres): ");
+        printf("Por favor insira o seu nome (m√°x 8 carat√©res): ");
         fgets(_pname, STRING_SIZE, stdin);
 
         l=(strlen(_pname)-1);
@@ -800,7 +800,7 @@ void parametros(int *x_pos, int *y_pos, int *_n_cor, int _goal[6], char *_pname)
 
     while ((testsize == -1 || testchar == -1 || testlimit == -1))
     {
-        printf("Por favor insira o tamanho desejado para o tabuleiro de jogo (Horizontal, m·x 15): ");
+        printf("Por favor insira o tamanho desejado para o tabuleiro de jogo (Horizontal, m√°x 15): ");
         fgets(tester, STRING_SIZE, stdin);
         testsize = sizetest(tester, 2);
         testchar = isnumber(tester);
@@ -818,7 +818,7 @@ void parametros(int *x_pos, int *y_pos, int *_n_cor, int _goal[6], char *_pname)
 
     while ((testsize == -1 || testchar == -1 || testlimit == -1))
     {
-        printf("Por favor insira o tamanho desejado para o tabuleiro de jogo (Vertical, m·x 15): ");
+        printf("Por favor insira o tamanho desejado para o tabuleiro de jogo (Vertical, m√°x 15): ");
         fgets(tester, STRING_SIZE, stdin);
         testsize = sizetest(tester, 2);
         testchar = isnumber(tester);
@@ -836,7 +836,7 @@ void parametros(int *x_pos, int *y_pos, int *_n_cor, int _goal[6], char *_pname)
 
     while ((testsize == -1 || testchar == -1 || testlimit == -1))
     {
-        printf("Por favor insira o n˙mero de cores desejado (m·x 5): ");
+        printf("Por favor insira o n√∫mero de cores desejado (m√°x 5): ");
         fgets(tester, STRING_SIZE, stdin);
         testsize = sizetest(tester, 1);
         testchar = isnumber(tester);
@@ -879,7 +879,7 @@ void parametros(int *x_pos, int *y_pos, int *_n_cor, int _goal[6], char *_pname)
 
     while ((testsize == -1 || testchar == -1 || testlimit == -1))
     {
-        printf("Por favor insira o n˙mero de jogadas (m·x 99): ");
+        printf("Por favor insira o n√∫mero de jogadas (m√°x 99): ");
         fgets(tester, STRING_SIZE, stdin);
         testsize = sizetest(tester, 2);
         testchar = isnumber(tester);
@@ -940,11 +940,11 @@ void resultados(char *_name,int _vit,int _der,int *_vit_j,int _game_n)
     fp =fopen("resultados.txt", "w" );
 
     fprintf(fp, "Nome do jogador: %s\n", _name);
-    fprintf(fp, "N˙mero total de jogos: %d | VitÛrias: %d | Derrotas: %d\n", _game_n, _vit, _der);
+    fprintf(fp, "N√∫mero total de jogos: %d | Vit√≥rias: %d | Derrotas: %d\n", _game_n, _vit, _der);
 
     for (int i=0; i<_game_n; i++)
     {
-        fprintf(fp, "Jogo N˙mero: %d: ", i+1);
+        fprintf(fp, "Jogo N√∫mero: %d: ", i+1);
         if (_vit_j[i] == 0)
         {
             fprintf(fp, "D\n");
@@ -1301,7 +1301,7 @@ int sizetest(char *_parameter, int size)
     l=(strlen(_parameter)-1);
     if (l>size)
     {
-        printf("Parametro inadequado (quantidade de carateres maior que a m·xima).\n");
+        printf("Parametro inadequado (quantidade de carateres maior que a m√°xima).\n");
         return -1;
     }
     else
@@ -1320,7 +1320,7 @@ int isnumber(char *_parameter)
         {}
         else
         {
-            printf("Parametro nao È composto somente por algarismos.\n");
+            printf("Parametro nao √© composto somente por algarismos.\n");
             return -1;
         }
     }
@@ -1368,7 +1368,7 @@ int points(int i)
 
     while ((test == -1 || testn == -1 || testin == -1))
     {
-        printf("Por favor insira o n˙mero de pontos %s (m·x 99): ", cor[i-1] );
+        printf("Por favor insira o n√∫mero de pontos %s (m√°x 99): ", cor[i-1] );
         fgets(tester, STRING_SIZE, stdin);
         test = sizetest(tester, 2);
         testn = isnumber(tester);
